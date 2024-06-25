@@ -140,6 +140,7 @@ else
     # 执行创建密钥命令
     echo "123" | eigenlayer operator keys create --key-type ecdsa --insecure wallet
 fi
+sleep 10
 
 sudo rm -rf ~/.tracks
 cd $HOME/tracks
