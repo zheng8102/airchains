@@ -134,13 +134,12 @@ if [ -f "$KEY_FILE" ]; then
     echo "文件 $KEY_FILE 已经存在，删除文件"
     rm -f "$KEY_FILE"
     # 执行创建密钥命令
-    echo "123" | eigenlayer operator keys create --key-type ecdsa --insecure wallet
+    echo "123" | eigenlayer operator keys create --key-type ecdsa --insecure wallet && sleep 10
 else
     echo "文件 $KEY_FILE 不存在，执行创建密钥操作"
     # 执行创建密钥命令
     echo "123" | eigenlayer operator keys create --key-type ecdsa --insecure wallet
 fi
-sleep 10
 
 sudo rm -rf ~/.tracks
 cd $HOME/tracks
