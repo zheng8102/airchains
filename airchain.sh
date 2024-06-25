@@ -134,8 +134,7 @@ if [ -f "$KEY_FILE" ]; then
     echo "文件 $KEY_FILE 已经存在，删除文件"
     rm -f "$KEY_FILE"
     # 执行创建密钥命令
-    #echo "123" | eigenlayer operator keys create --key-type ecdsa --insecure wallet && sleep 10
-    echo "123" | eigenlayer operator keys create --key-type ecdsa wallet
+    echo "123" | eigenlayer operator keys create --key-type ecdsa --insecure wallet | awk '/Public Key hex:/ {print $4} /Ethereum Address:/ {print $3}'
 else
     echo "文件 $KEY_FILE 不存在，执行创建密钥操作"
     # 执行创建密钥命令
