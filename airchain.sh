@@ -124,7 +124,11 @@ EOF
     sudo systemctl start wasmstationd
     
     cd
-
+wget https://github.com/airchains-network/tracks/releases/download/v0.0.2/eigenlayer
+sudo chmod +x eigenlayer
+sudo mv eigenlayer /usr/local/bin/eigenlayer
+# 定义文件路径
+KEY_FILE="$HOME/.eigenlayer/operator_keys/wallet.ecdsa.key.json"
 
 sudo rm -rf ~/.tracks
 cd $HOME/tracks
