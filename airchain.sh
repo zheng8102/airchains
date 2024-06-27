@@ -149,7 +149,6 @@ go run cmd/main.go init \
     --stationAPI "http://127.0.0.1:1317" \
     --stationType "wasm"
 
-go run cmd/main.go keys junction --accountName wallet --accountPath $HOME/.tracks/junction-accounts/keys
 
 go run cmd/main.go prover v1WASM
 
