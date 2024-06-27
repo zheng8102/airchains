@@ -146,10 +146,12 @@ go run cmd/main.go init \
     --stationRpc "http://127.0.0.1:26657" \
     --stationAPI "http://127.0.0.1:1317" \
     --stationType "wasm"
+    
+go run cmd/main.go keys junction --accountName wallet --accountPath $HOME/.tracks/junction-accounts/keys
 
 cp ~/wallet.wallet.json /root/.tracks/junction-accounts/keys/wallet.wallet.json
 cp ~/wallet.info /root/.tracks/junction-accounts/keys/keyring-test/wallet.info
-
+echo "替换完成"
 go run cmd/main.go prover v1WASM
 
 # 询问用户是否要继续执行
