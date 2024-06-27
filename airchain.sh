@@ -147,8 +147,8 @@ go run cmd/main.go init \
     --stationAPI "http://127.0.0.1:1317" \
     --stationType "wasm"
 
-cp ~/wallet.wallet.json /root/.tracks/junction-accounts/keys/wallet.wallet.json
-cp ~/wallet.info /root/.tracks/junction-accounts/keys/keyring-test/wallet.info
+cp ~/wallet.wallet.json ~/.tracks/junction-accounts/keys/wallet.wallet.json
+cp ~/wallet.info ~/.tracks/junction-accounts/keys/keyring-test/wallet.info
 
 go run cmd/main.go prover v1WASM
 
